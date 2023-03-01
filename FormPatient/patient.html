@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire de patient</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx-1.3.7.js"></script>
+	<script src="./js/formulaire.js"></script>
+    <link rel="stylesheet" href="patient.css">
+	<link rel="stylesheet" href="../Page1/style.css">
+
+
+
+</head>
+<body>
+
+	<!-- Header de la page "Se connecter avec Metamask", "Ajout Patient", "Ajout Docteur", "Solde, "Déconnecter"-->
+	<header>
+
+		<img src="../logo-metamask.png" alt="Logo Metamask">
+		<button id="bouton-connexion">Se connecter avec Metamask 🔌</button>
+		<button onclick="window.location.href='../FormPatient/patient.html'">Ajout Patient 🤒</button>
+		<button onclick="window.location.href='../FormDocteur/Docteur.html'">Ajout Docteur 👨‍⚕️ </button>
+		<button onclick="window.location.href='../addDoctor/index.html'">Vérifier Docteur ✅</button>
+		<button onclick="window.location.href='../Solde/solde.html'">Solde 👛 </button>
+		<button onclick="window.location.href='../Page1/page1.html'">Déconnecter 🚪🚶</button>
+	
+	  </header>
+
+
+	<!-- 
+		Formulaire pour ajouter de patient dans le smart Contract "PatientContract.sol" .
+		"Vous pouvez consulter le journal des transactions d'ajout dans le contrat intelligent
+		 en ouvrant la console d'inspection de votre navigateur et en naviguant jusqu'à l'onglet « Console »."
+	-->  
+
+	<h1>Formulaire de patient</h1>
+	<form id="formulaire">
+		<label for="nom">Nom:</label><br>
+		<input type="text" id="nom" name="nom" required><br>
+
+		<label for="prenom">Prénom:</label><br>
+		<input type="text" id="prenom" name="prenom" required><br>
+
+		<label for="dateNaissance">Date de naissance:</label><br>
+		<input type="date" id="dateNaissance" name="dateNaissance" required><br>
+
+		<label for="sexe">Sexe:</label><br>
+		<select id="sexe" name="sexe">
+			<option value="F">F</option>
+			<option value="M">M</option>
+		</select><br>
+
+		<label for="adresse">Adresse:</label><br>
+		<input type="text" id="adresse" name="adresse" required><br>
+
+		<label for="ville">Ville:</label><br>
+		<input type="text" id="ville" name="ville" required><br>
+
+		<label for="pays">Pays:</label><br>
+		<input type="text" id="pays" name="pays" required><br>
+
+		<label for="tel">Téléphone:</label><br>
+		<input type="text" id="tel" name="tel" required><br>
+
+		<label for="email">E-mail:</label><br>
+		<input type="email" id="email" name="email" required><br>
+		
+
+		<button id="btn" type="submit">Ajouter patient</button>
+	</form>
+<br>
+    <div>
+    <table id="patientTable"> 
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de naissance</th>
+            <th>Sexe</th>
+            <th>Adresse</th>
+            <th>Ville</th>
+            <th>Pays</th>
+            <th>Téléphone</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+      
+
+
+   
+    
+	<!-- la bibliothèque Web3.js est importée depuis un CDN (Content Delivery Network)pour être utilisée dans 
+         la page web en cours de développement. -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+	
+
+	<!-- le fichier JavaScript "patient.js" contienne du code qui interagit avec le smart Contract "PatientContract.sol". -->
+    <script src="patient.js"></script>
+
+
+	<script src="../Page1/connect.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajouter un médecin</title>
+  
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../Page1/style.css">
+  
+
+
+</head>
+<body>
+
+  <!-- Header de la page "Se connecter avec Metamask", "Ajout Patient", "Ajout Docteur", "Solde, "Déconnecter"-->
+  <header>
+
+    <img src="../logo-metamask.png" alt="Logo Metamask">
+    <button id="bouton-connexion">Se connecter avec Metamask 🔌</button>
+    <button onclick="window.location.href='../FormPatient/patient.html'">Ajout Patient 🤒</button>
+    <button onclick="window.location.href='../FormDocteur/Docteur.html'">Ajout Docteur 👨‍⚕️ </button>
+    <button onclick="window.location.href='../addDoctor/index.html'">Vérifier Docteur ✅</button>
+    <button onclick="window.location.href='../Solde/solde.html'">Solde 👛 </button>
+    <button onclick="window.location.href='../Page1/page1.html'">Déconnecter 🚪🚶</button>
+
+  </header>
+
+
+  <!-- Ajouter une adresse de médecin dans le smart contract "DoctorRegistry.sol"-->
+
+  <h1>Ajouter un médecin</h1>
+  <form>
+    <label for="doctorAddress">Adresse du médecin :</label>
+    <input type="text" id="doctorAddress">
+    <button type="button" onclick="addDoctor()">Ajouter</button>
+  </form>
+
+
+
+  <!-- Vérifier si une adresse appartient à un médecin -->
+  <h1>Vérifier si une adresse appartient à un médecin</h1>
+  <form>
+    <label for="checkAddress">Adresse à vérifier :</label>
+    <input type="text" id="checkAddress">
+    <button type="button" onclick="isDoctor()">Vérifier</button>
+  </form>
+
+
+
+   <!-- la bibliothèque Web3.js est importée depuis un CDN (Content Delivery Network)pour être utilisée dans 
+         la page web en cours de développement. -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+
+  <!-- le fichier JavaScript "DoctorRegistry.js" contienne du code qui interagit avec le smart Contract "DoctorRegistry.sol". -->
+  <script src="DoctorRegistry.js"></script>
+
+
+  <script src="../Page1/connect.js"></script>
+</body>
+</html>

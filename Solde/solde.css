@@ -1,0 +1,74 @@
+/* Style pour le corps de la page */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style pour les titres */
+  h1 {
+    font-size: 2.5rem;
+    color: #fbad11;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Style pour les paragraphes */
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Style pour les éléments span contenant des informations */
+  span {
+    font-weight: bold;
+    color: #ff1e00;
+  }
+  
+  /* Style pour l'élément span avec l'id "account" */
+  #account {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+  
+  /* Style pour l'élément span avec l'id "balance" */
+  #balance {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Effet de transition pour le solde du compte */
+  #balance::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fbd67149;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  #balance:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Style pour l'élément span avec l'id "network" */
+  #network {
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  

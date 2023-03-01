@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ma DApp avec Metamask</title>
+    <link rel="stylesheet" href="../Page1/style.css">
+    <link rel="stylesheet" href="GestionDocteurs.css">
+
+  </head>
+  <body>
+
+    <!-- Header de la page "Se connecter avec Metamask", "Ajout Patient", "Ajout Docteur", "Solde, "Déconnecter"-->
+    <header>
+
+      <img src="../logo-metamask.png" alt="Logo Metamask">
+      <button id="bouton-connexion">Se connecter avec Metamask 🔌</button>
+      <button onclick="window.location.href='../FormPatient/patient.html'">Ajout Patient 🤒</button>
+      <button onclick="window.location.href='../FormDocteur/Docteur.html'">Ajout Docteur 👨‍⚕️ </button>
+      <button onclick="window.location.href='../addDoctor/index.html'">Vérifier Docteur ✅</button>
+      <button onclick="window.location.href='../Solde/solde.html'">Solde 👛 </button>
+      <button onclick="window.location.href='../Page1/page1.html'">Déconnecter 🚪🚶</button>
+
+    </header>
+
+
+
+
+    <h1> <b>Ajouter Docteur 👨‍⚕️</b> </h1>
+    <form>
+      <label>Adresse Ethereum:</label>
+      <input type="text" id="ethereumAddress"><br>
+    
+      <label>Nom:</label>
+      <input type="text" id="nom"><br>
+    
+      <label>Prénom:</label>
+      <input type="text" id="prenom"><br>
+    
+      <label>Genre:</label>
+      <input type="text" id="genre"><br>
+    
+      <label>Âge:</label>
+      <input type="number" id="age"><br>
+    
+      <label>E-mail:</label>
+      <input type="email" id="email"><br>
+    
+      <label>Numéro de téléphone:</label>
+      <input type="text" id="telephone"><br>
+    
+      <input type="button" value="Ajouter Docteur" onclick="ajouterDocteur()">
+    </form>
+    
+
+    <button id="btn" onclick="afficherDocteurs()">Liste des docteurs</button>
+    <ul id="docteurs"></ul>
+    
+  
+      
+    <!-- la bibliothèque Web3.js est importée depuis un CDN (Content Delivery Network)pour être utilisée dans 
+         la page web en cours de développement. -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+
+
+    <script src="formDocteur.js"></script>
+    
+    <script src="../Page1/connect.js"></script>
+
+  </body>
+</html>
+

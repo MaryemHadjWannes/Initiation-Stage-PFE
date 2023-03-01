@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Compte Metamask</title>
+	<script>
+		window.addEventListener('load', async () => {
+			// Vérifier si Metamask est installé
+			if (typeof window.ethereum !== 'undefined') {
+				// Demander l'autorisation d'accéder au compte
+				await window.ethereum.enable();
+				// Obtenir l'adresse du compte actif
+				const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+				const account = accounts[0];
+				// Afficher le solde du compte
+				const balance = await window.ethereum.request({ method: 'eth_getBalance', params: [account] });
+				// Mettre à jour l'interface utilisateur avec le solde
+                document.getElementById('account').innerHTML = account;
+				document.getElementById('balance').innerHTML = balance;
+				// Obtenir le type de réseau
+				const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+				let network;
+				switch (chainId) {
+					case '0x1':
+						network = 'Mainnet';
+						break;
+					case '0x3':
+						network = 'Ropsten';
+						break;
+					case '0x4':
+						network = 'Rinkeby';
+						break;
+					case '0x5':
+						network = 'Goerli';
+						break;
+					case '0x2a':
+						network = 'Kovan';
+						break;
+					case '0x539':
+						network ='Localhost'; 
+						break;
+					default:
+						network = 'Autre';
+				}
+				// Afficher le type de réseau
+				document.getElementById('network').innerHTML = network;
+			} else {
+				alert('Veuillez installer Metamask pour accéder à votre compte.');
+			}
+		});
+	</script>
+
+    <link rel="stylesheet" href="../Page1/style.css">
+    <link rel="stylesheet" href="solde.css">
+</head>
+<body>
+
+	<!-- Header de la page "Se connecter avec Metamask", "Ajout Patient", "Ajout Docteur", "Solde, "Déconnecter"-->
+	<header>
+
+		<img src="../logo-metamask.png" alt="Logo Metamask">
+		<button id="bouton-connexion">Se connecter avec Metamask 🔌</button>
+		<button onclick="window.location.href='../FormPatient/patient.html'">Ajout Patient 🤒</button>
+		<button onclick="window.location.href='../FormDocteur/Docteur.html'">Ajout Docteur 👨‍⚕️ </button>
+		<button onclick="window.location.href='../addDoctor/index.html'">Vérifier Docteur ✅</button>
+		<button onclick="window.location.href='../Solde/solde.html'">Solde 👛 </button>
+		<button onclick="window.location.href='../Page1/page1.html'">Déconnecter 🚪🚶</button>
+	
+	  </header>
+    
+	<h1>Compte Metamask</h1>
+	<p><b>Adresse du compte :</b> <span id="account"></span></p>
+	<p><b>Solde du compte :</b> <span id="balance"></span></p>
+	<p><b>Type de réseau :</b> <span id="network"></span></p>
+</body>
+</html>
+

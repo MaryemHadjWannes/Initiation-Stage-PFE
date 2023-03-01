@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ma DApp avec Metamask</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleloginForm.css">
+
+  </head>
+  <body>
+
+
+    <header>
+      <img src="../logo-metamask.png" alt="Logo Metamask">
+      <button id="bouton-connexion">Se connecter avec Metamask</button>
+    </header>
+
+    
+    <div id="loginForm">
+        <h2>Marhba Admin</h2>
+        <label for="addressInput"><b>Address:</b></label>
+        <input type="text" id="addressInput">
+        <label for="passwordInput"><b>Password:</b></label>
+        <input type="password" id="passwordInput">
+        <button id="loginButton">Authenticate</button>
+    </div>
+
+
+    
+    
+    <!-- la bibliothèque Web3.js est importée depuis un CDN (Content Delivery Network)pour être utilisée dans 
+         la page web en cours de développement. -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+
+    
+    <script src="connect.js"></script>
+    <script src="auth.js"></script> 
+  </body>
+</html>
