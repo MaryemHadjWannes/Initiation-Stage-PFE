@@ -66,6 +66,7 @@ async function addDoctor() {
 }
 
 // ^^^^^^^ from : "0xCD6E...2C7" "C'est l'adresse utilisée dans Metamask pour payer la transaction." ^^^^^^
+// Pour rendre  la récupération de l'adresse auto, on peut utilisé "ethereum.selectedAddress" retourne l'adresse connecté sur Metamask.
 
 
 /* 
