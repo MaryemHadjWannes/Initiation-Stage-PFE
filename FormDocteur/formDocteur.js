@@ -135,7 +135,7 @@ function ajouterDocteur() {
     age,
     email,
     telephone
-  ).send({ from: "0xCD6E16041d6E539E267C410639B56B4C0e90E2C7", gas:500000 }, function(error, result) { 
+  ).send({ from: ethereum.selectedAddress, gas:500000 }, function(error, result) { 
     if (error) {
       console.error(error);
     } else

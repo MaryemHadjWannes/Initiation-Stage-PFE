@@ -61,7 +61,7 @@ async function isDoctor() {
 // Fonction pour ajouter un médecin
 async function addDoctor() {
   const doctorAddress = document.getElementById("doctorAddress").value;
-  await contract.methods.addDoctor(doctorAddress).send({ from: "0xCD6E16041d6E539E267C410639B56B4C0e90E2C7" });
+  await contract.methods.addDoctor(doctorAddress).send({ from: ethereum.selectedAddress });
   console.log("Médecin ajouté avec succès !");
 }
 
