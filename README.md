@@ -29,7 +29,7 @@ Avant de pouvoir utiliser ce projet, vous devez avoir les outils suivants instal
 
 5. Dans Remix, copier l'adresse et l'ABI de chaque smart contract déployé
 
-6. Dans le fichier ***'patient.js'*** (Etape1_Connect JS_SmartContract\FormPatient\patient.js), remplacer ***'contractAddress'*** et ***'contractABI'*** par l'adresse et l'ABI du smart contract ***patient.sol**
+6. Dans le fichier ***'patient.js'*** (Etape1_Connect JS_SmartContract\FormPatient\patient.js), remplacer ***'contractAddress'*** et ***'contractABI'*** par l'adresse et l'ABI du smart contract ***patient.sol***
 
 7. Dans le fichier ***'formDocteur.js'*** (Etape1_Connect JS_SmartContract\FormDocteur\formDocteur.js), remplacer ***'gestionDocteursContractAddress'*** et ***'gestionDocteursAbi'*** par l'adresse et l'ABI du smart contract ***GestionsDocteur.sol***
 
