@@ -23,7 +23,7 @@ Avant de pouvoir utiliser ce projet, vous devez avoir les outils suivants instal
 1. Cloner le repository : git clone https://github.com/MaryemHadjWannes/Stage-PFE-CRNS.git
 
 2. Ouvrir le projet dans Visual Studio Code
-3. Dans Remix, ouvrir les fichiers ***patient.sol***, ***GestionDocteurs.sol et ***DoctorRegistry.sol***
+3. Dans Remix, ouvrir les fichiers ***patient.sol***, ***GestionDocteurs.sol*** et ***DoctorRegistry.sol***
 
 4. Compiler et déployer ces smart contracts sur le réseau local Ganache/Metamask
 
@@ -63,7 +63,7 @@ const adminPassword = "admin123"; // remplacez par votre password d'admin
 
 ### Docteur.html
 
-- Formulaire à remplir pour ajouter un docteur sur le smart contract ***'Gestionsocteurs.sol'*** .
+- Formulaire à remplir pour ajouter un docteur sur le smart contract ***'GestionsDocteurs.sol'*** .
 
 ![IMAGE ALT TEXT HERE](https://github.com/MaryemHadjWannes/Stage-PFE-CRNS/blob/master/captures%20projet/formDocteur.png)
 
