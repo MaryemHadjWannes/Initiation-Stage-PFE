@@ -17,7 +17,7 @@ loginButton.addEventListener("click", () => {
     alert("Authentication successful!");
     
     // ajoutez votre code pour rediriger vers la zone d'authentification ici
-    window.location.replace("Docteur.html"); // rediriger vers la page "Docteur.html" après une authentification réussie
+    window.location.replace("../FormDocteur/Docteur.html"); // rediriger vers la page "Docteur.html" après une authentification réussie
 
   } else {
     alert("Invalid address or password!");
