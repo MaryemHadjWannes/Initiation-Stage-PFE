@@ -89,8 +89,8 @@ const adminPassword = "admin123"; // remplacez par votre password d'admin
 
 ![IMAGE ALT TEXT HERE](https://github.com/MaryemHadjWannes/Stage-PFE-CRNS/blob/master/captures%20projet/Vérifier.png)
 
-- le bouton ***"Vérifie"*** Vérifier si l'adresse est enregistrée ou non, si l'adresse est enregistrée il affiche dans le console ***"est un médecin enregistré"*** sinon il affiche ***"n'est pas un médecin enregistré"***.
-- le bouton ***"Ajout"*** Ajoute l'adresse de médecin dans le smart contract ***'DoctorRegistry'***
+- le bouton ***"Vérifie"*** Vérifie si l'adresse est enregistrée ou non, si l'adresse est enregistrée il affiche dans le console ***"est un médecin enregistré"*** sinon il affiche ***"n'est pas un médecin enregistré"***.
+- le bouton ***"Ajouter"*** Ajoute l'adresse de médecin dans le smart contract ***'DoctorRegistry'***
 
 ![IMAGE ALT TEXT HERE](https://github.com/MaryemHadjWannes/Stage-PFE-CRNS/blob/master/captures%20projet/Ajout-Verf.png)
 
