@@ -103,3 +103,6 @@ const adminPassword = "admin123"; // remplacez par votre password d'admin
 
 2.
 ![IMAGE ALT TEXT HERE](https://github.com/MaryemHadjWannes/Stage-PFE-CRNS/blob/master/captures%20projet/goerli.png)
+
+### Faucet 
+free Goerli : https://goerli-faucet.pk910.de/
